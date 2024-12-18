@@ -32,7 +32,7 @@ const MemberTableMUI = () => {
 
     const generateQRCode = async (id) => {
         try {
-            const response = await axios.get(`${FEUrl}/generate-qr/${id}`);
+            const response = await axios.get(`${baseUrl}/generate-qr/${id}`);
             setQrCode(response.data.qrCode);
             setUrl(response.data.url);
             setMemberId(id)
@@ -84,7 +84,7 @@ const MemberTableMUI = () => {
                                 <Box>
                                     <QRCodeCanvas
                                         id={`qr-canvas-${member.id}`}
-                                        value={`${baseUrl}/members/${member.id}`}
+                                        value={`${FEUrl}/members/${member.id}`}
                                         size={100}
                                         hidden={true}
                                     />
