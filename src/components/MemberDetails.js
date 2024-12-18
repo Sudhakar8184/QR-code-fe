@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Card, CardContent, Typography, Box, Button } from '@mui/material';
-import { QRCodeCanvas } from 'qrcode.react';
 import axios from 'axios';
-import baseUrl from '../config';
+import { baseUrl } from '../config';
 
 const MemberDetailsPage = () => {
     const { id } = useParams();  // Get member ID from the URL

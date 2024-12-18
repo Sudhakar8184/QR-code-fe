@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { TextField, Button, Container, Typography, Box } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import baseUrl from '../config';
+import { baseUrl } from '../config';
 import axios from 'axios';
 
 const Login = () => {

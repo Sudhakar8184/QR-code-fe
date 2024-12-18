@@ -3,7 +3,7 @@ import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper
 import { QRCodeCanvas } from 'qrcode.react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import baseUrl from '../config';
+import { FEUrl, baseUrl } from '../config';
 
 const MemberTableMUI = () => {
     const [members, setMembers] = useState([]);
@@ -32,7 +32,7 @@ const MemberTableMUI = () => {
 
     const generateQRCode = async (id) => {
         try {
-            const response = await axios.get(`${baseUrl}/generate-qr/${id}`);
+            const response = await axios.get(`${FEUrl}/generate-qr/${id}`);
             setQrCode(response.data.qrCode);
             setUrl(response.data.url);
             setMemberId(id)
