@@ -33,30 +33,44 @@ const MemberDetailsPage = () => {
     }
 
     return (
-        <Box sx={{ padding: 4, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <Card sx={{ width: 500, padding: 3 }}>
-                <CardContent>
-                    <Typography variant="h5" gutterBottom>
-                        Member Details
-                    </Typography>
-                    <Typography variant="h6" gutterBottom>
-                        ID: {member.id}
-                    </Typography>
-                    <Typography variant="h6" gutterBottom>
-                        Name: {member.name}
-                    </Typography>
-                    {/* Add other member details as needed */}
-                    <Typography variant="body1" gutterBottom>
-                        <strong>Email:</strong> {member.email}
-                    </Typography>
-                    <Typography variant="body1" gutterBottom>
-                        <strong>Phone:</strong> {member.phone}
-                    </Typography>
-                    {/* Add more member details as needed */}
-                    
-                </CardContent>
-            </Card>
-        </Box>
+       <Box
+      sx={{
+        padding: 4,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+      }}
+    >
+      <Card
+        sx={{
+          padding: 3,
+          width: {
+            xs: '90%', // Small screens
+            sm: 400,   // Medium screens
+            md: 500,   // Larger screens
+          },
+        }}
+      >
+        <CardContent>
+          <Typography variant="h5" gutterBottom>
+            Member Details
+          </Typography>
+          <Typography variant="h6" gutterBottom>
+            ID: {member.id}
+          </Typography>
+          <Typography variant="h6" gutterBottom>
+            Name: {member.name}
+          </Typography>
+          <Typography variant="body1" gutterBottom>
+            <strong>Email:</strong> {member.email}
+          </Typography>
+          <Typography variant="body1" gutterBottom>
+            <strong>Phone:</strong> {member.phone}
+          </Typography>
+        </CardContent>
+      </Card>
+    </Box>
+
     );
 };
 
