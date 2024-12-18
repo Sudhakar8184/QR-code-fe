@@ -84,7 +84,7 @@ const MemberTableMUI = () => {
                                 <Box>
                                     <QRCodeCanvas
                                         id={`qr-canvas-${member.id}`}
-                                        value={`${FEUrl}/members/${member.id}`}
+                                        value={`${FEUrl}/member/${member.id}`}
                                         size={100}
                                         hidden={true}
                                     />
